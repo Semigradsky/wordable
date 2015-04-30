@@ -19,21 +19,23 @@
     
     </h3>
     <div class="ui inverted attached segment">
-        <!--<div class="invisible"> если соперник
-        вывод cписка слов слов
+        <!--<div class="invisible"> если соперник-->
+        {{#sortable items=words animation="100" options=wordsOptions}}
         <a class="ui large label">
-          слово
+            {{name}}
         </a>
-        </div>-->
+        {{/sortable}}
+        <!--</div>-->
     </div>
     <h3 class="ui attached header">
         Предложение:
     </h3>
     <div class="ui inverted attached segment">
-        <!--тоже самое, но для составления слов
-         <a class="ui large teal label">
-            слово
-         </a>-->
+        {{#sortable items=wordsInbox animation="100" options=wordsInboxOptions}}
+        <a class="ui large teal label">
+            {{name}}
+        </a>
+        {{/sortable}}
     </div>
     <div class="ui bottom attached segment">
         <p><b>Статус:</b> </p>
